@@ -30,6 +30,7 @@ class VehicleResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-truck';
     protected static ?string $navigationLabel = 'Data Kendaraan';
     protected static ?int $navigationSort = 2;
+    protected static ?string $navigationGroup = 'Data Master';
     protected static ?string $label = 'Data Kendaraan';
 
     public static function form(Form $form): Form
