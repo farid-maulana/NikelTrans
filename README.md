@@ -1,66 +1,132 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center">
+  NikelTrans
+</h1>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**NikelTrans** adalah sebuah sistem berbasis web yang digunakan untuk memonitoring kendaraan yang dimiliki oleh
+perusahaan tambang Nikel.
+Sistem ini dibangun menggunakan Laravel 11 dan Filament.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Authentication**
+- **Manajemen Kendaraan**
+- **Manajemen Pegawai/Driver**
+- **Data Approver (Pihak Penyetuju)**
+- **Pemesanan Kendaraan**
+- **Monitoring Maintenance Kendaraan**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Installation
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Buka terminal menggunakan Command Prompt atau GitBash.
+- Arahkan ke direktori tempat kita akan menyimpan projek.
+- Jalankan perintah berikut pada terminal.
+  ```
+  git clone https://github.com/farid-maulana/NikelTrans.git
+  ```
+- Masuk ke dalam direktori projek.
+- Jalankan perintah berikut untuk menginstall dependency.
+  ```
+  composer install
+  ```
+  ```
+  composer update
+  ```
+- Buka project menggunakan text editor.
+- Jalankan perinah berikut untuk menyalin dan mengubah file **.env.example** menjadi **.env.**
+    - Windows
+      ```
+      copy .env.example .env
+      ```
+    - Linux/MacOS
+      ```
+      cp .env.example .env
+      ```
+- Isi konfigurasi database pada file **.env**.
+  ```
+  DB_CONNECTION=mariadb
+  DB_HOST=
+  DB_PORT=
+  DB_DATABASE=nikel_trans
+  DB_USERNAME=
+  DB_PASSWORD=
+  ```
+- Jalankan perintah ***php artisan key:generate*** pada terminal.
+  ```
+  php artisan key:generate
+  ```
+- Jalankan perintah berikut pada terminal untuk menginstall dependency nodejs.
+  ```
+  npm install
+  ```
+- Jalankan perintah berikut pada terminal.
+  ```
+  npm run dev
+  ```
+- Jalankan perintah berikut untuk menyimpan file dari web server
+  ```
+  php artisan storage:link
+  ```
+- Jalankan perintah berikut pada terminal untuk membuat tabel dan seeding data.
+  ```
+  php artisan migrate:fresh --seed
+  ```
+- Jalankan perintah berikut pada terminal untuk menjalankan server.
+  ```
+  php artisan serve
+  ```
 
-## Learning Laravel
+## Requirement
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+(Recomended)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- PHP Version: "^8.2"
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+  Link untuk download :
+  https://www.php.net/downloads
 
-## Laravel Sponsors
+- Nodejs Version: "^20.11.0"
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+  Link untuk download :
+  https://nodejs.org/en/download
 
-### Premium Partners
+- MySQL Version: "^10.4.32"
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+  Link untuk download :
+  https://dev.mysql.com/downloads/mysql/
 
-## Contributing
+- Composer version: "^2.5.4"
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+  Link untuk download :
+  https://getcomposer.org/download/
 
-## Code of Conduct
+- Git
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+  Link untuk download :
+  https://git-scm.com/
 
-## Security Vulnerabilities
+- GD extension
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- **Windows**: Windows 10 atau lebih baru.
+- **Linux**: Ubuntu 18.04 atau lebih baru, CentOS 7 atau lebih baru, Debian 9 atau lebih baru, dan distribusi Linux
+  lainnya yang mendukung versi PHP dan dependensi lain yang diperlukan.
+- **macOS**: macOS 10.13 (High Sierra) atau lebih baru.
 
-## License
+## Dependencies:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- laravel framework: "^11.9"
+- laravel/tinker: "^2.8"
+- filament/filament: "^3.0-stable"
+
+## Development Dependencies:
+
+- fakerphp/faker: "^1.23"
+- laravel/pint: "^1.12"
+- laravel/sail: "^1.26"
+- mockery/mockery: "^1.6"
+- nunomaduro/collision: "^8.0"
+- pestphp/pest: "^2.34"
+- pestphp/pest-plugin-laravel: "^2.4"
+- axios: "^1.6.4",
+- laravel-vite-plugin: "^1.0.0",
+- vite: ">=5.0.12"
+  
