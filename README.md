@@ -130,3 +130,5 @@ Sistem ini dibangun menggunakan Laravel 11 dan Filament.
 - laravel-vite-plugin: "^1.0.0",
 - vite: ">=5.0.12"
   
+## Database Analysis Diagram
+![drawSQL-image-export-2024-05-30](https://github.com/farid-maulana/NikelTrans/assets/52988155/59db8478-e025-4ec6-90b7-ddce24210071)
