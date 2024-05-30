@@ -13,7 +13,8 @@ class UserSeeder extends Seeder
         User::factory()->create([
             'name' => 'Administrator',
             'email' => 'admin@nikeltrans.com',
-            'password' => Hash::make('password')
+            'password' => Hash::make('password'),
+            'role' => 'admin',
         ]);
     }
 }
